@@ -16,16 +16,11 @@ import lombok.Setter;
  */
 @AllArgsConstructor
 @NoArgsConstructor
-class InfoItem implements Serializable {
+@Getter
+@Setter
+public class InfoItem implements Serializable {
 
 	private static final long serialVersionUID = -779695043380592601L;
-
-	@Getter
-	@Setter
 	public String errorCode = null;
-
-	@Getter
-	@Setter
 	public String errorText = null;
-
 }

@@ -4,10 +4,14 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import javax.naming.AuthenticationException;
+import java.util.ArrayList;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import io.mosip.kernel.core.authmanager.model.MosipUserDto;
 
 /***********************************************************************************************************************
  * Used by spring security to store user details like roles and use this across
@@ -30,10 +34,14 @@ public class AuthUserDetails implements UserDetails {
 	private static final long serialVersionUID = 4068560701182593212L;
 
 	private String userId;
-	private String token;
-	private String mail;
 	private String mobile;
+	private String mail;
+	private String langCode;
+	private String userPassword;
+	private String name;
+	private String role;
 	private String rId;
+	private String token;
 	private String idToken;
 
 	private Collection<? extends GrantedAuthority> authorities;

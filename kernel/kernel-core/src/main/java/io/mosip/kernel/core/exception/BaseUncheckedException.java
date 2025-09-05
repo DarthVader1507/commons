@@ -93,7 +93,10 @@ public class BaseUncheckedException extends RuntimeException {
 	 * @return the instance of current BaseCheckedException
 	 */
 	public BaseUncheckedException addInfo(String errorCode, String errorText) {
-		this.infoItems.add(new InfoItem(errorCode, errorText));
+		InfoItem item = new InfoItem();
+		item.setErrorCode(errorCode);
+		item.setErrorText(errorText);
+		this.infoItems.add(0, item);
 		return this;
 	}
 
