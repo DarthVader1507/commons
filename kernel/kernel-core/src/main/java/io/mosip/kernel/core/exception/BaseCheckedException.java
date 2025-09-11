@@ -84,10 +84,7 @@ public class BaseCheckedException extends Exception {
 	 * @return the current instance of BaseCheckedException
 	 */
 	public BaseCheckedException addInfo(String errorCode, String errorText) {
-		InfoItem item = new InfoItem();
-		item.setErrorCode(errorCode);
-		item.setErrorText(errorText);
-		this.infoItems.add(0, item);
+		this.infoItems.add(new InfoItem(errorCode, errorText));
 		return this;
 	}
 

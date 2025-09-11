@@ -29,9 +29,6 @@ public class Node<T> {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getId() {
-		return id;
-	}
 
 	public boolean addChild(Node<T> child) {
 		if (childs == null) {
@@ -46,31 +43,16 @@ public class Node<T> {
 		}
 		return childs.addAll(list);
 	}
-	public List<Node<T>> getChilds() {
-		if (childs == null) {
-			return new ArrayList<>();
-		}
-		return childs;
-	}
 
 	public void setValue(T value) {
 		this.value = value;
-	}
-	public T getValue() {
-		return value;
 	}
 
 	public void setParentId(String parentId) {
 		this.parentId = parentId;
 	}
-	public String getParentId() {
-		return parentId;
-	}
 
 	public void setParent(Node<T> parent) {
 		this.parent = parent;
-	}
-	public Node<T> getParent() {
-		return parent;
 	}
 }

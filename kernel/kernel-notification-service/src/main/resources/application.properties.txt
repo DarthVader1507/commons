@@ -1,0 +1,16 @@
+# minimal local config so app doesn't call config-server
+server.port=8080
+mosip.auth.adapter.impl.basepackage=dummy.adapter
+
+# Telegram (easy to test)
+telegram.bot.token=YOUR_TELEGRAM_BOT_TOKEN
+telegram.chat.id=YOUR_TELEGRAM_CHAT_ID
+
+# Twilio (WhatsApp) - fill only if you use Twilio
+twilio.account.sid=
+twilio.auth.token=
+twilio.whatsapp.from=whatsapp:+1415XXXXXXX
+
+# Viber (optional)
+viber.auth.token=
+viber.sender.id=
